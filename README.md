@@ -1,10 +1,10 @@
 # The Unofficial Gren Tree-Sitter Package!
 
+[![.github/workflows/tree-sitter-test.yml](https://github.com/MaeBrooks/tree-sitter-gren/actions/workflows/tree-sitter-test.yml/badge.svg?branch=main)](https://github.com/MaeBrooks/tree-sitter-gren/actions/workflows/tree-sitter-test.yml)
+
 ## THIS IS A WORK IN PROGRESS !!
 
----
-
-## TODO
+### Todo Items
 - [x] parse `module` statement
 - [ ] parse `module Foo.Bar(.*)` statements
 - [ ] explicit error cases
