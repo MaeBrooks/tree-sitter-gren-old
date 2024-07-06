@@ -1,0 +1,17 @@
+==================================
+Module Exposing Identity And Types
+==================================
+
+module App exposing (view, Msg(Increment, Decrement))
+
+---
+
+(source_file
+  (module
+    module_name: (identifier)
+    exposing: (exposing
+      (identifier)
+      (type_with_constructors
+        name: (identifier)
+        constructor: (identifier)
+        constructor: (identifier)))))

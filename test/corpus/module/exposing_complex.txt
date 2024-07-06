@@ -1,0 +1,23 @@
+=======================
+Module Exposing Complex
+=======================
+
+module App exposing (foo, Msg(Increment, Decrement, Reset), Other(..), .., bar)
+
+---
+
+(source_file
+  (module
+    module_name: (identifier)
+    exposing: (exposing
+      (identifier)
+      (type_with_constructors
+        name: (identifier)
+        constructor: (identifier)
+        constructor: (identifier)
+        constructor: (identifier))
+      (type_with_constructors
+        name: (identifier)
+        constructor: (spread))
+      (spread)
+      (identifier))))

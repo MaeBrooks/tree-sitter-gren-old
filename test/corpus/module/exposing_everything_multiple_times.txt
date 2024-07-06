@@ -1,0 +1,17 @@
+=========================================
+Module Exposing Everything Multiple Times
+=========================================
+
+module MainA exposing (.., .., ..)
+
+---
+
+(source_file
+  (module
+    module_name: (identifier)
+    exposing: (exposing
+      (spread)
+      (spread)
+      (spread)
+    )))
+

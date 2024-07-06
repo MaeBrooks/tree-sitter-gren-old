@@ -1,0 +1,15 @@
+=======================================
+Module Exposing Identity And Everything
+=======================================
+
+module Core exposing (main, ..)
+
+---
+
+(source_file
+  (module
+    module_name: (identifier)
+    exposing: (exposing
+      (identifier)
+      (spread)
+    )))
