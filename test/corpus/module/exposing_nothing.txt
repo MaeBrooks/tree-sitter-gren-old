@@ -1,0 +1,12 @@
+=============
+Module Exposing Nothing
+=============
+
+module Foo exposing ()
+
+---
+
+(source_file
+  (module
+    module_name: (identifier)
+    exposing: (exposing)))

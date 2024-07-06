@@ -1,0 +1,14 @@
+==========================
+Module Exposing Everything
+==========================
+
+module MainA exposing (..)
+
+---
+
+(source_file
+  (module
+    module_name: (identifier)
+    exposing: (exposing
+      (spread)
+    )))

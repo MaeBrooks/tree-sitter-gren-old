@@ -1,0 +1,14 @@
+========================
+Module Exposing Identity
+========================
+
+module MainA exposing (main)
+
+---
+
+(source_file
+  (module
+    module_name: (identifier)
+    exposing: (exposing
+      (identifier)
+    )))

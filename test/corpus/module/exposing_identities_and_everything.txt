@@ -1,0 +1,15 @@
+=========================================
+Module Exposing Identities And Everything
+=========================================
+
+module Int exposing (fromString, fromChar, ..)
+
+---
+
+(source_file
+  (module
+    module_name: (identifier)
+    exposing: (exposing
+      (identifier)
+      (identifier)
+      (spread))))

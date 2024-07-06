@@ -1,0 +1,20 @@
+==============================
+Module Exposing Multiple Types
+==============================
+
+module App exposing (Msg(Increment, Decrement, Reset), Other(..))
+
+---
+
+(source_file
+  (module
+    module_name: (identifier)
+    exposing: (exposing
+      (type_with_constructors
+        name: (identifier)
+        constructor: (identifier)
+        constructor: (identifier)
+        constructor: (identifier))
+      (type_with_constructors
+        name: (identifier)
+        constructor: (spread)))))
