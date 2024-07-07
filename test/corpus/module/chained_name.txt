@@ -1,0 +1,12 @@
+===================
+Module Chained Name
+===================
+
+module App.Is.Cool exposing ()
+
+---
+
+(source_file
+  (module
+    module_name: (module_name)
+    exposing: (exposing)))

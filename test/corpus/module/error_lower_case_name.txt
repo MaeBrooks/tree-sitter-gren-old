@@ -1,6 +1,6 @@
-================================
-Module Name Fails When Lowercase
-================================
+===========================
+Module Error Lowercase Name
+===========================
 
 module apP exposing (Msg(Increment, Decrement, Reset))
 
