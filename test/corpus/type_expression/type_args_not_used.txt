@@ -1,0 +1,17 @@
+==================
+Type Args Not Used
+==================
+
+type Foo a b c d = Foo
+
+---
+
+(source_file
+  (type_definition
+    name: (Identifier)
+    args: (identifier)
+    args: (identifier)
+    args: (identifier)
+    args: (identifier)
+    value: (custom_type
+      name: (Identifier))))

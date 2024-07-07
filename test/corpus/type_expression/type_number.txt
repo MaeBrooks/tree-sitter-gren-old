@@ -1,0 +1,12 @@
+=============
+Type 'number'
+=============
+
+type Foo = number
+
+---
+
+(source_file
+  (type_definition
+    name: (Identifier)
+    value: (primative)))

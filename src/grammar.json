@@ -14,6 +14,10 @@
         {
           "type": "SYMBOL",
           "name": "module"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "type_definition"
         }
       ]
     },
@@ -233,6 +237,171 @@
         }
       ]
     },
+    "type_definition": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "type"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "FIELD",
+                  "name": "name",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "Identifier"
+                  }
+                },
+                {
+                  "type": "FIELD",
+                  "name": "args",
+                  "content": {
+                    "type": "CHOICE",
+                    "members": [
+                      {
+                        "type": "REPEAT1",
+                        "content": {
+                          "type": "SYMBOL",
+                          "name": "identifier"
+                        }
+                      },
+                      {
+                        "type": "BLANK"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "STRING",
+                  "value": "="
+                },
+                {
+                  "type": "FIELD",
+                  "name": "value",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "_type"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "_type": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "type_chain"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "primative"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "custom_type"
+        }
+      ]
+    },
+    "custom_type": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "FIELD",
+          "name": "name",
+          "content": {
+            "type": "SYMBOL",
+            "name": "Identifier"
+          }
+        },
+        {
+          "type": "FIELD",
+          "name": "args",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "REPEAT1",
+                "content": {
+                  "type": "SYMBOL",
+                  "name": "identifier"
+                }
+              },
+              {
+                "type": "BLANK"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "primative": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "number"
+        },
+        {
+          "type": "STRING",
+          "value": "Float"
+        },
+        {
+          "type": "STRING",
+          "value": "Int"
+        },
+        {
+          "type": "STRING",
+          "value": "Char"
+        },
+        {
+          "type": "STRING",
+          "value": "String"
+        },
+        {
+          "type": "STRING",
+          "value": "Bool"
+        }
+      ]
+    },
+    "type_chain": {
+      "type": "PREC_LEFT",
+      "value": 1,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "FIELD",
+            "name": "left",
+            "content": {
+              "type": "SYMBOL",
+              "name": "_type"
+            }
+          },
+          {
+            "type": "STRING",
+            "value": "->"
+          },
+          {
+            "type": "FIELD",
+            "name": "right",
+            "content": {
+              "type": "SYMBOL",
+              "name": "_type"
+            }
+          }
+        ]
+      }
+    },
     "spread": {
       "type": "STRING",
       "value": ".."
@@ -244,6 +413,10 @@
     "identifier": {
       "type": "PATTERN",
       "value": "[\\w]+([\\w\\d_])*"
+    },
+    "Identifier": {
+      "type": "PATTERN",
+      "value": "[A-Z]+([\\w\\d_])*"
     },
     "number": {
       "type": "PATTERN",

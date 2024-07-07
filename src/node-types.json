@@ -1,5 +1,31 @@
 [
   {
+    "type": "custom_type",
+    "named": true,
+    "fields": {
+      "args": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      },
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "Identifier",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
     "type": "exposing",
     "named": true,
     "fields": {},
@@ -49,6 +75,11 @@
     }
   },
   {
+    "type": "primative",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "source_file",
     "named": true,
     "fields": {},
@@ -59,8 +90,98 @@
         {
           "type": "module",
           "named": true
+        },
+        {
+          "type": "type_definition",
+          "named": true
         }
       ]
+    }
+  },
+  {
+    "type": "type_chain",
+    "named": true,
+    "fields": {
+      "left": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "custom_type",
+            "named": true
+          },
+          {
+            "type": "primative",
+            "named": true
+          },
+          {
+            "type": "type_chain",
+            "named": true
+          }
+        ]
+      },
+      "right": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "custom_type",
+            "named": true
+          },
+          {
+            "type": "primative",
+            "named": true
+          },
+          {
+            "type": "type_chain",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "type_definition",
+    "named": true,
+    "fields": {
+      "args": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      },
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "Identifier",
+            "named": true
+          }
+        ]
+      },
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "custom_type",
+            "named": true
+          },
+          {
+            "type": "primative",
+            "named": true
+          },
+          {
+            "type": "type_chain",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
@@ -106,6 +227,38 @@
     "named": false
   },
   {
+    "type": "->",
+    "named": false
+  },
+  {
+    "type": "=",
+    "named": false
+  },
+  {
+    "type": "Bool",
+    "named": false
+  },
+  {
+    "type": "Char",
+    "named": false
+  },
+  {
+    "type": "Float",
+    "named": false
+  },
+  {
+    "type": "Identifier",
+    "named": true
+  },
+  {
+    "type": "Int",
+    "named": false
+  },
+  {
+    "type": "String",
+    "named": false
+  },
+  {
     "type": "exposing",
     "named": false
   },
@@ -122,11 +275,19 @@
     "named": true
   },
   {
+    "type": "number",
+    "named": false
+  },
+  {
     "type": "port",
     "named": false
   },
   {
     "type": "spread",
     "named": true
+  },
+  {
+    "type": "type",
+    "named": false
   }
 ]

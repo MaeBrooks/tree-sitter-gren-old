@@ -1,0 +1,38 @@
+=====
+Types
+=====
+
+type Digit = Int
+type Boolean = Bool
+type Character = Char
+type Long = Float
+type Num = number
+type Word = String
+type ToWord = Char -> String
+
+---
+
+(source_file
+  (type_definition
+    name: (Identifier)
+    value: (primative))
+  (type_definition
+    name: (Identifier)
+    value: (primative))
+  (type_definition
+    name: (Identifier)
+    value: (primative))
+  (type_definition
+    name: (Identifier)
+    value: (primative))
+  (type_definition
+    name: (Identifier)
+    value: (primative))
+  (type_definition
+    name: (Identifier)
+    value: (primative))
+  (type_definition
+    name: (Identifier)
+    value: (type_chain
+      left: (primative)
+      right: (primative))))

@@ -1,0 +1,12 @@
+=============
+Type 'Bool'
+=============
+
+type A = Bool
+
+---
+
+(source_file
+  (type_definition
+    name: (Identifier)
+    value: (primative)))

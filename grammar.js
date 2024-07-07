@@ -7,6 +7,7 @@ module.exports = grammar({
       source_file: $ => repeat($._definition),
       _definition: $ => choice(
         $.module,
+        $.type_definition,
       ),
       module: $ => seq(
         "module",
@@ -42,9 +43,45 @@ module.exports = grammar({
           seperator: ","
         })
       ),
+      type_definition: $ => seq(
+        "type",
+        choice(
+          seq(
+            field("name", $.Identifier),
+            field("args", optional(repeat1($.identifier))),
+            "=",
+            field("value", $._type)),
+        )
+      ),
+      _type: $ => choice(
+        $.type_chain,
+        $.primative,
+        $.custom_type,
+      ),
+      custom_type: $ => seq(
+        field("name", $.Identifier),
+        field("args", optional(repeat1($.identifier))),
+      ),
+      primative: $ => choice(
+        "number",
+        "Float",
+        "Int",
+        "Char",
+        "String",
+        "Bool"
+      ),
+      type_chain: $ => prec.left(
+        1,
+        seq(
+          field("left", $._type),
+          "->",
+          field("right", $._type),
+        ),
+      ),
       spread: $ => "..",
       module_name: $ => /[A-Z]\w*(\.[A-Z]\w*)*/,
       identifier: $ => /[\w]+([\w\d_])*/,
+      Identifier: $ => /[A-Z]+([\w\d_])*/,
       number: $ => /\d+(\.\d*)*/,
     }
 });

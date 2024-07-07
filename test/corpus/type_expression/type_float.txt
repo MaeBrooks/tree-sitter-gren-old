@@ -1,0 +1,12 @@
+=============
+Type 'Float'
+=============
+
+type Long = Float
+
+---
+
+(source_file
+  (type_definition
+    name: (Identifier)
+    value: (primative)))

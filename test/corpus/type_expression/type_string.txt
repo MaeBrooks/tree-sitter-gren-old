@@ -1,0 +1,12 @@
+=============
+Type 'String'
+=============
+
+type Name = String
+
+---
+
+(source_file
+  (type_definition
+    name: (Identifier)
+    value: (primative)))
