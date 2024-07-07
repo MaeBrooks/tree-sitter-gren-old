@@ -1,5 +1,31 @@
 [
   {
+    "type": "custom_type",
+    "named": true,
+    "fields": {
+      "args": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      },
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "Identifier",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
     "type": "exposing",
     "named": true,
     "fields": {},
@@ -81,6 +107,10 @@
         "required": true,
         "types": [
           {
+            "type": "custom_type",
+            "named": true
+          },
+          {
             "type": "primative",
             "named": true
           },
@@ -94,6 +124,10 @@
         "multiple": false,
         "required": true,
         "types": [
+          {
+            "type": "custom_type",
+            "named": true
+          },
           {
             "type": "primative",
             "named": true
@@ -110,6 +144,16 @@
     "type": "type_definition",
     "named": true,
     "fields": {
+      "args": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      },
       "name": {
         "multiple": false,
         "required": true,
@@ -124,6 +168,10 @@
         "multiple": false,
         "required": true,
         "types": [
+          {
+            "type": "custom_type",
+            "named": true
+          },
           {
             "type": "primative",
             "named": true

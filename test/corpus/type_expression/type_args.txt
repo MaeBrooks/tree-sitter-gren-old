@@ -1,0 +1,17 @@
+=========
+Type Args
+=========
+
+type Foo a b = Foo a b
+
+---
+
+(source_file
+  (type_definition
+    name: (Identifier)
+    args: (identifier)
+    args: (identifier)
+    value: (custom_type
+      name: (Identifier)
+      args: (identifier)
+      args: (identifier))))

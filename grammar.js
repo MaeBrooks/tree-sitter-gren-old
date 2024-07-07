@@ -46,9 +46,9 @@ module.exports = grammar({
       type_definition: $ => seq(
         "type",
         choice(
-          // seq("alias", $.identifier, "=", $.TODO),
           seq(
             field("name", $.Identifier),
+            field("args", optional(repeat1($.identifier))),
             "=",
             field("value", $._type)),
         )
@@ -56,6 +56,11 @@ module.exports = grammar({
       _type: $ => choice(
         $.type_chain,
         $.primative,
+        $.custom_type,
+      ),
+      custom_type: $ => seq(
+        field("name", $.Identifier),
+        field("args", optional(repeat1($.identifier))),
       ),
       primative: $ => choice(
         "number",
