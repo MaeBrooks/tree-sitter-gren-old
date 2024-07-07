@@ -41,7 +41,7 @@
         "required": true,
         "types": [
           {
-            "type": "identifier",
+            "type": "module_name",
             "named": true
           }
         ]
@@ -116,6 +116,10 @@
   {
     "type": "module",
     "named": false
+  },
+  {
+    "type": "module_name",
+    "named": true
   },
   {
     "type": "port",

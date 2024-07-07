@@ -29,7 +29,7 @@
           "name": "module_name",
           "content": {
             "type": "SYMBOL",
-            "name": "identifier"
+            "name": "module_name"
           }
         },
         {
@@ -236,6 +236,10 @@
     "spread": {
       "type": "STRING",
       "value": ".."
+    },
+    "module_name": {
+      "type": "PATTERN",
+      "value": "[A-Z]\\w*(\\.[A-Z]\\w*)*"
     },
     "identifier": {
       "type": "PATTERN",

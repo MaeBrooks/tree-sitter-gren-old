@@ -1,17 +1,18 @@
-==================================
-Module Exposing Identity And Types
-==================================
+===========================
+Module Error Lowercase Name
+===========================
 
-module App exposing (view, Msg(Increment, Decrement))
+module apP exposing (Msg(Increment, Decrement, Reset))
 
 ---
 
 (source_file
   (module
+    (ERROR (UNEXPECTED 'a'))
     module_name: (module_name)
     exposing: (exposing
-      (identifier)
       (type_with_constructors
         name: (identifier)
+        constructor: (identifier)
         constructor: (identifier)
         constructor: (identifier)))))

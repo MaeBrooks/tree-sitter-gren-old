@@ -1,0 +1,16 @@
+===================================
+Module Error Multiple Lowercase Chained Name
+===================================
+
+module App.is.So.cool exposing ()
+
+---
+
+(source_file
+  (module
+    (module_name)
+    (ERROR
+      (UNEXPECTED 'i')
+      (module_name)
+      (UNEXPECTED 'c'))
+    (exposing)))

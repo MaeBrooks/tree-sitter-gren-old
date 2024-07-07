@@ -10,7 +10,7 @@ module.exports = grammar({
       ),
       module: $ => seq(
         "module",
-        field("module_name", $.identifier),
+        field("module_name", $.module_name),
         field("exposing", $.exposing),
       ),
       port: $ => seq(
@@ -43,6 +43,7 @@ module.exports = grammar({
         })
       ),
       spread: $ => "..",
+      module_name: $ => /[A-Z]\w*(\.[A-Z]\w*)*/,
       identifier: $ => /[\w]+([\w\d_])*/,
       number: $ => /\d+(\.\d*)*/,
     }

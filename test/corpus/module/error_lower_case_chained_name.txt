@@ -1,0 +1,13 @@
+===================================
+Module Error Lowercase Chained Name
+===================================
+
+module App.is.cool exposing ()
+
+---
+
+(source_file
+  (module
+    (module_name)
+    (ERROR (UNEXPECTED 'i'))
+    (exposing)))

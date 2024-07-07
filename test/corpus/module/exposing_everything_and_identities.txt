@@ -8,7 +8,7 @@ module String exposing (.., toInt, fromInt)
 
 (source_file
   (module
-    module_name: (identifier)
+    module_name: (module_name)
     exposing: (exposing
       (spread)
       (identifier)
