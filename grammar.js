@@ -43,7 +43,7 @@ module.exports = grammar({
         })
       ),
       spread: $ => "..",
-      module_name: $ => /\W\w*(\.\W\w*)*/,
+      module_name: $ => /[A-Z]\w*(\.[A-Z]\w*)*/,
       identifier: $ => /[\w]+([\w\d_])*/,
       number: $ => /\d+(\.\d*)*/,
     }

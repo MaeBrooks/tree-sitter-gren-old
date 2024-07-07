@@ -1,0 +1,18 @@
+================================
+Module Name Fails When Lowercase
+================================
+
+module apP exposing (Msg(Increment, Decrement, Reset))
+
+---
+
+(source_file
+  (module
+    (ERROR (UNEXPECTED 'a'))
+    module_name: (module_name)
+    exposing: (exposing
+      (type_with_constructors
+        name: (identifier)
+        constructor: (identifier)
+        constructor: (identifier)
+        constructor: (identifier)))))

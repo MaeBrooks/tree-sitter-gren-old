@@ -239,7 +239,7 @@
     },
     "module_name": {
       "type": "PATTERN",
-      "value": "\\W\\w*(\\.\\W\\w*)*"
+      "value": "[A-Z]\\w*(\\.[A-Z]\\w*)*"
     },
     "identifier": {
       "type": "PATTERN",
