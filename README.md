@@ -6,7 +6,7 @@
 
 ### Todo Items
 - [x] parse `module` statement
-- [ ] parse `module Foo.Bar(.*)` statements
+- [x] parse `module Foo.Bar(.*)` statements
 - [ ] explicit error cases
 - [ ] parse `port module` statement
 - [ ] parse `import x`
