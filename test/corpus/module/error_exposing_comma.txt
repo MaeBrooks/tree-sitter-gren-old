@@ -1,0 +1,13 @@
+==========================
+Module Error Exposing Comma
+==========================
+
+module Foo exposing (,)
+
+---
+
+(source_file
+  (module
+    (module_name)
+    (exposing
+      (ERROR))))

@@ -1,0 +1,14 @@
+==============================
+Module Error Exposing Identity
+==============================
+
+module Foo exposing (Hello,)
+
+---
+
+(source_file
+  (module
+    module_name: (module_name)
+    exposing: (exposing
+      (identifier)
+      (MISSING identifier))))

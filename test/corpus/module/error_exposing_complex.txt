@@ -1,0 +1,26 @@
+=============================
+Module Error Exposing Complex
+=============================
+
+module Foo exposing (.., bar(, Thing(..), Things(Foo, Bar, Baz), item, items,)
+
+---
+
+(source_file
+  (module
+    (module_name)
+    (exposing
+      (spread)
+      (identifier)
+      (ERROR)
+      (type_with_constructors
+        (identifier)
+        (spread))
+      (type_with_constructors
+        (identifier)
+        (identifier)
+        (identifier)
+        (identifier))
+     (identifier)
+     (identifier)
+     (MISSING identifier))))

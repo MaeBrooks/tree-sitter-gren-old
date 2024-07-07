@@ -1,0 +1,14 @@
+======================================
+Module Error Exposing Everything Comma
+======================================
+
+module Foo exposing (.. ,)
+
+---
+
+(source_file
+  (module
+    (module_name)
+    (exposing
+      (spread)
+      (MISSING identifier))))

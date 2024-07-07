@@ -1,0 +1,19 @@
+===========================
+Module Error Exposing Types
+===========================
+
+module Foo exposing (Hello,wow,Cool(.))
+
+---
+
+(source_file
+  (module
+    module_name: (module_name)
+    exposing: (exposing
+      (identifier)
+      (identifier)
+      (type_with_constructors
+        name: (identifier)
+        (ERROR
+          (UNEXPECTED ')'))))
+  ))

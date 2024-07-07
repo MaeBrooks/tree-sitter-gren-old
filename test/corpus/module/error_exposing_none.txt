@@ -1,0 +1,10 @@
+==========================
+Module Error Exposing None
+==========================
+
+module Foo exposing
+
+---
+
+(source_file
+  (ERROR (module_name)))
