@@ -8,7 +8,7 @@ module MainA exposing (main, core, foo, bar)
 
 (source_file
   (module
-    module_name: (identifier)
+    module_name: (module_name)
     exposing: (exposing
       (identifier)
       (identifier)

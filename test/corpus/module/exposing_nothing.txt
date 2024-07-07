@@ -8,5 +8,5 @@ module Foo exposing ()
 
 (source_file
   (module
-    module_name: (identifier)
+    module_name: (module_name)
     exposing: (exposing)))

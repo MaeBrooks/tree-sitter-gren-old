@@ -8,7 +8,7 @@ module App exposing (Msg(Increment, Decrement, Reset))
 
 (source_file
   (module
-    module_name: (identifier)
+    module_name: (module_name)
     exposing: (exposing
       (type_with_constructors
         name: (identifier)
