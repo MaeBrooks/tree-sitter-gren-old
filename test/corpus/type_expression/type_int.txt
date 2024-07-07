@@ -2,8 +2,11 @@
 Type 'Int'
 =============
 
-Int
+type Counter = Int
 
 ---
 
-(source_file (ERROR (type_int)))
+(source_file
+  (type_definition
+    name: (Identifier)
+    value: (primative)))

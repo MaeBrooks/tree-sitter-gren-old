@@ -2,8 +2,11 @@
 Type 'Float'
 =============
 
-Float
+type Long = Float
 
 ---
 
-(source_file (ERROR (type_float)))
+(source_file
+  (type_definition
+    name: (Identifier)
+    value: (primative)))

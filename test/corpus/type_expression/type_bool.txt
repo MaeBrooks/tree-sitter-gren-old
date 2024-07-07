@@ -2,8 +2,11 @@
 Type 'Bool'
 =============
 
-Bool
+type A = Bool
 
 ---
 
-(source_file (ERROR (type_bool)))
+(source_file
+  (type_definition
+    name: (Identifier)
+    value: (primative)))

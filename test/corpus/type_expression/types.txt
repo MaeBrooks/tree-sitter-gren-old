@@ -2,20 +2,37 @@
 Types
 =====
 
-Int
-Bool
-Char
-Float
-number
-String
+type Digit = Int
+type Boolean = Bool
+type Character = Char
+type Long = Float
+type Num = number
+type Word = String
+type ToWord = Char -> String
 
 ---
 
 (source_file
-  (ERROR
-    (type_int)
-    (type_bool)
-    (type_char)
-    (type_float)
-    (type_number)
-    (type_string)))
+  (type_definition
+    name: (Identifier)
+    value: (primative))
+  (type_definition
+    name: (Identifier)
+    value: (primative))
+  (type_definition
+    name: (Identifier)
+    value: (primative))
+  (type_definition
+    name: (Identifier)
+    value: (primative))
+  (type_definition
+    name: (Identifier)
+    value: (primative))
+  (type_definition
+    name: (Identifier)
+    value: (primative))
+  (type_definition
+    name: (Identifier)
+    value: (type_chain
+      left: (primative)
+      right: (primative))))

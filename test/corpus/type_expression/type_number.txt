@@ -2,8 +2,11 @@
 Type 'number'
 =============
 
-number
+type Foo = number
 
 ---
 
-(source_file (ERROR (type_number)))
+(source_file
+  (type_definition
+    name: (Identifier)
+    value: (primative)))

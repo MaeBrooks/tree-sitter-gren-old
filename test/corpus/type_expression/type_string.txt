@@ -2,8 +2,11 @@
 Type 'String'
 =============
 
-String
+type Name = String
 
 ---
 
-(source_file (ERROR (type_string)))
+(source_file
+  (type_definition
+    name: (Identifier)
+    value: (primative)))

@@ -2,8 +2,11 @@
 Type 'Char'
 =============
 
-Char
+type Foo = Char
 
 ---
 
-(source_file (ERROR (type_char)))
+(source_file
+  (type_definition
+    name: (Identifier)
+    value: (primative)))
