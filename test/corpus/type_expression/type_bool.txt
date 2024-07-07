@@ -1,0 +1,9 @@
+=============
+Type 'Bool'
+=============
+
+Bool
+
+---
+
+(source_file (ERROR (type_bool)))

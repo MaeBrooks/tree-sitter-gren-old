@@ -128,5 +128,29 @@
   {
     "type": "spread",
     "named": true
+  },
+  {
+    "type": "type_bool",
+    "named": true
+  },
+  {
+    "type": "type_char",
+    "named": true
+  },
+  {
+    "type": "type_float",
+    "named": true
+  },
+  {
+    "type": "type_int",
+    "named": true
+  },
+  {
+    "type": "type_number",
+    "named": true
+  },
+  {
+    "type": "type_string",
+    "named": true
   }
 ]

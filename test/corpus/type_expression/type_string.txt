@@ -1,0 +1,9 @@
+=============
+Type 'String'
+=============
+
+String
+
+---
+
+(source_file (ERROR (type_string)))

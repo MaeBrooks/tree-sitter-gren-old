@@ -233,6 +233,59 @@
         }
       ]
     },
+    "_type_expression": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "type_number"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "type_float"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "type_int"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "type_char"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "type_string"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "type_bool"
+        }
+      ]
+    },
+    "type_number": {
+      "type": "STRING",
+      "value": "number"
+    },
+    "type_float": {
+      "type": "STRING",
+      "value": "Float"
+    },
+    "type_int": {
+      "type": "STRING",
+      "value": "Int"
+    },
+    "type_char": {
+      "type": "STRING",
+      "value": "Char"
+    },
+    "type_string": {
+      "type": "STRING",
+      "value": "String"
+    },
+    "type_bool": {
+      "type": "STRING",
+      "value": "Bool"
+    },
     "spread": {
       "type": "STRING",
       "value": ".."

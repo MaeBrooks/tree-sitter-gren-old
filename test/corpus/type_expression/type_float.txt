@@ -1,0 +1,9 @@
+=============
+Type 'Float'
+=============
+
+Float
+
+---
+
+(source_file (ERROR (type_float)))

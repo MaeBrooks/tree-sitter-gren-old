@@ -1,0 +1,9 @@
+=============
+Type 'Int'
+=============
+
+Int
+
+---
+
+(source_file (ERROR (type_int)))

@@ -42,6 +42,20 @@ module.exports = grammar({
           seperator: ","
         })
       ),
+      _type_expression: $ => choice(
+        $.type_number,
+        $.type_float,
+        $.type_int,
+        $.type_char,
+        $.type_string,
+        $.type_bool,
+      ),
+      type_number: $ => "number",
+      type_float: $ => "Float",
+      type_int: $ => "Int",
+      type_char: $ => "Char",
+      type_string: $ => "String",
+      type_bool: $ => "Bool",
       spread: $ => "..",
       module_name: $ => /[A-Z]\w*(\.[A-Z]\w*)*/,
       identifier: $ => /[\w]+([\w\d_])*/,

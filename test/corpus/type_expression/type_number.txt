@@ -1,0 +1,9 @@
+=============
+Type 'number'
+=============
+
+number
+
+---
+
+(source_file (ERROR (type_number)))

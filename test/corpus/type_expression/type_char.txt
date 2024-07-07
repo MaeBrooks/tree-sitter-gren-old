@@ -1,0 +1,9 @@
+=============
+Type 'Char'
+=============
+
+Char
+
+---
+
+(source_file (ERROR (type_char)))
