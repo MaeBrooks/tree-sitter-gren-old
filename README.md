@@ -7,7 +7,6 @@
 ### Todo Items
 - [x] parse `module` statement
 - [x] parse `module Foo.Bar(.*)` statements
-- [ ] explicit error cases for exposing
 - [ ] create a list of names the compiler uses for its AST to help create as close to a 1-1 match as possible
 - [ ] parse `port module` statement
 - [ ] parse `import x`
