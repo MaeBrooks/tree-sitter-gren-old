@@ -1,0 +1,26 @@
+====================
+Type Alias To Record
+====================
+
+type alias Model a =
+  { wow : String
+  , so : a
+  , cool : { age : Int }
+  }
+
+---
+
+(source_file
+  (type_definition
+    name: (Identifier)
+    args: (identifier)
+    value: (record_type
+      field: (identifier)
+      value: (primative)
+      field: (identifier)
+      value: (custom_type
+        name: (identifier))
+      field: (identifier)
+      value: (record_type
+        field: (identifier)
+        value: (primative)))))

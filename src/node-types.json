@@ -80,6 +80,40 @@
     "fields": {}
   },
   {
+    "type": "record_type",
+    "named": true,
+    "fields": {
+      "field": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      },
+      "value": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "custom_type",
+            "named": true
+          },
+          {
+            "type": "primative",
+            "named": true
+          },
+          {
+            "type": "record_type",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
     "type": "source_file",
     "named": true,
     "fields": {},
@@ -132,6 +166,10 @@
           },
           {
             "type": "primative",
+            "named": true
+          },
+          {
+            "type": "record_type",
             "named": true
           },
           {
@@ -189,6 +227,10 @@
     "named": false
   },
   {
+    "type": ":",
+    "named": false
+  },
+  {
     "type": "=",
     "named": false
   },
@@ -214,6 +256,10 @@
   },
   {
     "type": "String",
+    "named": false
+  },
+  {
+    "type": "alias",
     "named": false
   },
   {
@@ -249,7 +295,15 @@
     "named": false
   },
   {
+    "type": "{",
+    "named": false
+  },
+  {
     "type": "|",
+    "named": false
+  },
+  {
+    "type": "}",
     "named": false
   }
 ]
