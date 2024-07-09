@@ -1,0 +1,25 @@
+================
+Type Union Enums
+================
+
+type Msg
+  = ViewUpdate ViewModal
+  | OffersUpdate OffersModal
+  | UsersUpdate a UsersModal a
+
+---
+
+(source_file
+  (type_definition
+    name: (Identifier)
+    value: (custom_type
+      name: (identifier)
+      args: (identifier))
+    value: (custom_type
+      name: (identifier)
+      args: (identifier))
+    value: (custom_type
+      name: (identifier)
+      args: (identifier)
+      args: (identifier)
+      args: (identifier))))

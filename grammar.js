@@ -50,7 +50,12 @@ module.exports = grammar({
             field("name", $.Identifier),
             field("args", optional(repeat1($.identifier))),
             "=",
-            field("value", $._type)),
+            field("value", $._type),
+            field("value", optional(repeat(seq(
+              "|",
+              $._type
+            ))))
+          ),
         )
       ),
       _type: $ => choice(
