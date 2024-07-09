@@ -18,7 +18,7 @@
         "required": true,
         "types": [
           {
-            "type": "Identifier",
+            "type": "identifier",
             "named": true
           }
         ]
@@ -99,48 +99,6 @@
     }
   },
   {
-    "type": "type_chain",
-    "named": true,
-    "fields": {
-      "left": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "custom_type",
-            "named": true
-          },
-          {
-            "type": "primative",
-            "named": true
-          },
-          {
-            "type": "type_chain",
-            "named": true
-          }
-        ]
-      },
-      "right": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "custom_type",
-            "named": true
-          },
-          {
-            "type": "primative",
-            "named": true
-          },
-          {
-            "type": "type_chain",
-            "named": true
-          }
-        ]
-      }
-    }
-  },
-  {
     "type": "type_definition",
     "named": true,
     "fields": {
@@ -174,10 +132,6 @@
           },
           {
             "type": "primative",
-            "named": true
-          },
-          {
-            "type": "type_chain",
             "named": true
           }
         ]
