@@ -22,7 +22,7 @@ module.exports = grammar({
       ),
       exposing: $ => seq(
         "exposing",
-        list({
+        repeated({
           rule: $._exposed,
           openingDelimiter: "(",
           closingDelimiter: ")",
@@ -36,7 +36,7 @@ module.exports = grammar({
       ),
       type_with_constructors: $ => seq(
         field("name", $.identifier),
-        list({
+        repeated({
           rule: field("constructor", choice($.spread, $.identifier)),
           openingDelimiter: "(",
           closingDelimiter: ")",
@@ -46,22 +46,45 @@ module.exports = grammar({
       type_definition: $ => seq(
         "type",
         choice(
-          seq(
-            field("name", $.Identifier),
-            field("args", optional(repeat1($.identifier))),
-            "=",
-            field("value", $._type),
-            field("value", optional(repeat(seq(
-              "|",
-              $._type
-            ))))
-          ),
+          $._basic_type_definition,
+          $._alias_type_definition,
         )
+      ),
+      _basic_type_definition: $ => seq(
+        field("name", $.Identifier),
+        field("args", optional(repeat1($.identifier))),
+        "=",
+        field("value", $._type),
+        field("value", optional(repeat(seq(
+          "|",
+          $._type
+        ))))
+      ),
+      _alias_type_definition: $ => seq(
+        "alias",
+        field("name", $.Identifier),
+        field("args", optional(repeat1($.identifier))),
+        "=",
+        field("value", $._complex_type),
+      ),
+      _complex_type: $ => choice(
+          $.record_type,
+          $._type,
       ),
       _type: $ => choice(
         $.primative,
         $.custom_type,
       ),
+      record_type: $ => repeated({
+        openingDelimiter: "{",
+        rule: seq(
+          field("field", $.identifier),
+          ":",
+          field("value", $._complex_type),
+        ),
+        closingDelimiter: "}",
+        seperator: ","
+      }),
       custom_type: $ => seq(
         field("name", $.identifier),
         field("args", optional(repeat1($.identifier))),
@@ -90,7 +113,7 @@ module.exports = grammar({
     }
 });
 
-function list({ rule, seperator = ",", openingDelimiter = "(", closingDelimiter = ")"}) {
+function repeated({ rule, seperator = ",", openingDelimiter = "(", closingDelimiter = ")"}) {
   return seq(
     openingDelimiter,
     optional(
