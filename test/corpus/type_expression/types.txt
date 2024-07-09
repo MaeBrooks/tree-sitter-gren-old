@@ -8,7 +8,7 @@ type Character = Char
 type Long = Float
 type Num = number
 type Word = String
-type ToWord = Char -> String
+type Foo a b = a b
 
 ---
 
@@ -33,6 +33,8 @@ type ToWord = Char -> String
     value: (primative))
   (type_definition
     name: (Identifier)
-    value: (type_chain
-      left: (primative)
-      right: (primative))))
+    args: (identifier)
+    args: (identifier)
+    value: (custom_type
+      name: (identifier)
+      args: (identifier))))

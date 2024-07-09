@@ -300,10 +300,6 @@
       "members": [
         {
           "type": "SYMBOL",
-          "name": "type_chain"
-        },
-        {
-          "type": "SYMBOL",
           "name": "primative"
         },
         {
@@ -320,7 +316,7 @@
           "name": "name",
           "content": {
             "type": "SYMBOL",
-            "name": "Identifier"
+            "name": "identifier"
           }
         },
         {

@@ -54,12 +54,11 @@ module.exports = grammar({
         )
       ),
       _type: $ => choice(
-        $.type_chain,
         $.primative,
         $.custom_type,
       ),
       custom_type: $ => seq(
-        field("name", $.Identifier),
+        field("name", $.identifier),
         field("args", optional(repeat1($.identifier))),
       ),
       primative: $ => choice(

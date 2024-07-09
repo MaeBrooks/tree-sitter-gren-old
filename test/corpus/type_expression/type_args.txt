@@ -12,6 +12,6 @@ type Foo a b = Foo a b
     args: (identifier)
     args: (identifier)
     value: (custom_type
-      name: (Identifier)
+      name: (identifier)
       args: (identifier)
       args: (identifier))))
